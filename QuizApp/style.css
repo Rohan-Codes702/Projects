@@ -1,0 +1,71 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+body{
+    background-image: url("feature1.jpg");
+    
+    
+}
+
+.maincontainer{
+height: 30%;
+width: 45%;
+background-color: white;
+margin-left: 30%;
+margin-top: 5%;
+padding: 0.5%;
+border-radius: 5%;
+box-shadow: 1px 1px 15px   rgb(255, 255, 255) ;
+}
+.heading{
+    padding: 5%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, Tahoma, Geneva, Verdana, sans-serif;
+}
+#question{
+    font-family:Arial, Helvetica, sans-serif;
+    padding: 1%;
+    margin: 1%;
+    font-size: medium;
+}
+#ans{
+  display: flex;
+  flex-direction: column;
+  font-size: small;
+}
+.btn{
+    padding: 1%;
+    margin: 2%;
+    background-color: white;
+    border: 0.5px solid;
+    cursor: pointer;
+}
+.btn:hover:not([disabled]){
+    background-color: blueviolet;
+}
+.btn:disabled{
+    cursor:no-drop;
+}
+#next{
+    background-color: violet;
+    height:33px;
+    width: 90px;
+    align-content:center;
+    margin-left:35%;
+    padding: 2%;
+    margin-top: 5%;
+    font-variant: small-caps;
+    border: 2px solid black;
+    border-radius: 50px;
+}
+#next:hover{
+    background-color:rgb(255, 136, 0);
+}
+
+
+.correct{
+    background-color: #9aeabc;
+}
+.inCorrect{
+    background: #ff9393;
+}

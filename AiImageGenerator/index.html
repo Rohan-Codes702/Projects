@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AiImageGenerator</title>
+      <link href="./src/output.css" rel="stylesheet">
+
+</head>
+<body class="bg-sky-100 ">
+    <nav class="w-full h-10  bg-white fixed top-0 shadow-lg  shadow-blue-300   items-center flex ">
+    <div class="font-bold shadow-black ml-2.5 ">AiImageGenerator</div>
+    <ul class="flex items-center ml-auto space-x-12 mr-6 ">
+    <li class="text-gray-700 cursor-pointer hover:text-blue-800 font-semibold">Home</li>
+    <li class="text-gray-700 cursor-pointer hover:text-blue-800 font-semibold">About</li>
+    <li class="text-gray-700 cursor-pointer hover:text-blue-800 font-semibold">Contact</li>
+  </ul>
+ </nav>
+
+<div class="flex  items-center justify-center ">
+<div class="h-full  w-2xl  mt-30 bg-white shadow-lg  shadow-black rounded-lg ">
+<h1 class="text-4xl font-extrabold text-blue-500 text-center p-5  ">
+  AiImageGenerator
+</h1>
+
+<input type="text" placeholder="Enter Image Name" id="input" class="min-w-2/4   h-10 border-4  border-emerald-400 m-10 ml-40 text-black rounded-lg   ">
+<button id="btn" class="w-1/2 h-10 bg-violet-800 rounded-lg border-0 text-white font-semibold text-center ml-40 mb-6  ">
+  Generate Image
+</button>
+<div id="gallery" class="flex flex-wrap gap-4 mt-6 ml-40 "></div>
+</div>
+</div>
+    
+<script src="script.js"></script>
+</body>
+</html>

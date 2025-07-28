@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weather</title>
+  <link rel="shortcut icon" href="images/clear.png" type="image/x-icon">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body, html {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      position: relative;
+    background:linear-gradient( rgb(24, 126, 166),rgb(243, 243, 246));      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+      height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      backdrop-filter: blur(4px);
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      width: 600px;
+      height: 300px;
+      padding: 40px 30px;
+      background: rgba(255 255 255 / 0.1);
+      border-radius: 20px;
+      box-shadow: 1px 8px 32px rgba(0,0,0,0.3);
+      animation: fadeSlideIn 1.2s ease forwards;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+      animation: textGlow 2s ease-in-out infinite alternate;
+    }
+
+
+    p {
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-top: 30px;
+      color: #faf4f4;
+      line-height: 1.4;
+      opacity: 0;
+      animation: fadeInText 1s forwards;
+      animation-delay: 1.2s;
+    }
+
+    button.start-btn {
+      padding: 12px 40px;
+      font-size: 1rem;
+      margin-top: 50px;
+      font-weight: 600;
+      color: #fff;
+      background: linear-gradient(135deg, #ff416c, #ff4b2b);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(255, 75, 43, 0.6);
+      transition: background 0.4s ease, box-shadow 0.4s ease;
+      opacity: 0;
+      animation: fadeInText 1s forwards;
+      animation-delay: 1.8s;
+    }
+
+    button.start-btn:hover {
+      background: linear-gradient(135deg, #ff4b2b, #ff416c);
+      box-shadow: 0 10px 30px rgba(255, 65, 92, 0.9);
+      transform: translateY(-3px);
+    }
+
+    /* Animations */
+    @keyframes fadeSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInText {
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes textGlow {
+      0% {
+        text-shadow:
+          0 0 5px #ff416c,
+          0 0 15px #ff416c,
+          0 0 20px #ff4b2b,
+          0 0 30px #ff4b2b;
+      }
+      100% {
+        text-shadow:
+          0 0 10px #ff4b2b,
+          0 0 20px #ff416c,
+          0 0 30px #ff416c,
+          0 0 40px #ff4b2b;
+      }
+    }
+
+    /* Particle effect container */
+    .particles {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .particle {
+      position: absolute;
+      background: rgb(233, 108, 108);
+      border-radius: 50%;
+      animation: floatUp linear infinite;
+      opacity: 0;
+    }
+
+    /* Animate particles floating upwards */
+    @keyframes floatUp {
+      0% {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>  
+    
+  <div class="particles"></div>
+
+  <div class="container">
+    <h1><img src="images/cloud.png" alt="" height="80px",width="80px">TecWeather</h1>
+    <p>Get Weather of any city</p>
+    <button class="start-btn" onclick="window.location.href='index.html'">Start</button>
+  </div>
+  
+
+  <script>
+    const particlesContainer = document.querySelector('.particles');
+
+    const particleCount = 100;
+
+    for(let i = 0; i < particleCount; i++) {
+      const particle = document.createElement('div');
+      particle.classList.add('particle');
+      
+      // Random size between 5px and 12px
+      const size = Math.random() * 7 + 5;
+      particle.style.width = size + 'px';
+      particle.style.height = size + 'px';
+
+      particle.style.left = Math.random() * 100 + 'vw';
+
+      const duration = Math.random() * 12 + 8;
+      particle.style.animationDuration = duration + 's';
+
+      particle.style.animationDelay = (Math.random() * duration) + 's';
+
+      particlesContainer.appendChild(particle);
+    }
+  </script>
+</body>
+</html>

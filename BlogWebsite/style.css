@@ -1,0 +1,57 @@
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    background-color: bisque;
+}
+.container{
+    height: 90%;
+    width: 90%;
+    margin: 0 auto;
+   background-color: rgb(246, 246, 246);
+   
+}
+
+.headercontainer{
+    border:1px solid black;
+    margin: 1%;
+}
+.code{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    margin: 0.5%;
+}
+.cardContainer{
+    box-shadow: 5px 5px 7px wheat ;
+    width: 22%;
+    margin: 1%;
+    border-radius: 2%;
+    
+}
+.imageContainer{
+    
+    align-items: center;
+
+}
+
+.nameConatiner{
+    text-align: center;
+    font-size: small;
+}
+.buttanconatiner{
+   padding: 1%;
+   margin-left: 50px;
+   margin-bottom: 5%;
+}
+.firstrow{
+    display: flex;
+    flex-direction: row;
+}
+@media(max-width:400){
+
+    .firstrow{
+        display: flex;
+        flex-direction: column;
+    }
+}

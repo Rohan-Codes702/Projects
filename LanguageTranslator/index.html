@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Translator</title>
+    <link href="./src/output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-200 ">
+    <div class=" mt-12  ml-80 mr-80  bg-white  rounded-xl shadow-lg shadow-gray-400 p-6 mx-auto">
+        <h1 class="font-stretch-200%  font-bold text-xl text-center text-orange-800 ">🌍 Language Translator </h1>
+
+        <textarea name="textarea" id="inputText" placeholder="Enter Text To Translate " class="  border-1  border-gray-300  rounded-lg  w-full mt-6 p-2 "></textarea>    
+        
+        <div class="flex gap-4 p-2  ">
+          <select name="srclanguage" id="srclanguage" class="w-1/2 p-2 border rounded ">
+       <option value="en">English</option>
+        <option value="hi">Hindi</option>
+        <option value="es">Spanish</option>
+        <option value="fr">French</option>
+
+    </select>
+
+        <select name="targetlanguage" id="targetlanguage" class="w-1/2 p-2 border rounded "> <!-- ✅ ID fixed here -->
+        <option value="hi">Hindi</option>
+        <option value="en">English</option>
+        <option value="es">Spanish</option>
+        <option value="fr">French</option>
+        </select>
+
+
+        </div>
+
+        <button id="Translatebtn" class="bg-blue-400  rounded-lg  text-white  w-full p-2 mt-2  " >Translate</button>
+
+    <div class="mt-4">
+      <h2 class="text-lg font-semibold">Translated Text:</h2>
+      <p id="translatedText" class="p-3 bg-gray-200 rounded mt-2"></p>
+    </div>
+       
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

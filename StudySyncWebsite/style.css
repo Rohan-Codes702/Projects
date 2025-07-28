@@ -1,0 +1,334 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+}
+.container{
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+}
+.header{
+    display: flex;
+}
+.section1{
+    display: flex;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    width: 28%;
+
+}
+.studysync{
+    margin-top: 15px;
+    font-size: 90%;
+    
+}
+.section2{
+ width: 35%;
+}
+.list{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    height: 100%;
+    align-items: center;
+    
+}
+li a{
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+}
+.section3{
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact{
+    color: #f4f0f0;
+    background-color: rgba(141, 7, 141, 0.923);
+    border-radius: 5px;
+    padding: 5px;    
+    margin-left: 60%;  
+}
+.mainContainer{
+    display: flex;
+    height:250px;
+    margin-top: 5%;
+
+}
+.leftSection{
+    width: 50%;
+    text-align: left;
+}
+
+.rightSection{
+    width: 50%;
+}
+.Introduce {
+    margin: 5%;
+    font-style: oblique;
+}
+h1{
+    margin: 4%;
+    font: 200;
+    align-content: center;
+}
+h6{
+    margin: 5%;
+    align-content: baseline;
+    font: size 2px;
+}
+.twobuttan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.btn1{
+    background-color: rgba(141, 7, 141, 0.923);;
+    color: rgb(247, 246, 246);
+    border-radius: 5px;
+    padding: 4px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+.btn2{
+    background-color: rgba(9, 0, 9, 0.923);;
+    color: rgb(247, 246, 246);
+    border-radius: 5px;
+    padding: 4px;
+    margin-right: 10px; 
+    text-decoration: none;
+}
+.CompanyConatiner{
+    width: 30%;
+    margin: 10%;
+    font-family:cursive;
+    font-size: small;
+    margin-left: 30%;
+}
+.companyname{
+    display: flex;
+    background-color: #fffbfb;
+    box-shadow: 3px 3px    10px ;
+    
+}
+h1{
+    font-size: large;
+}
+.companylogo{
+    height:40px ;
+    width: 40px;
+    margin: 7px;
+
+}
+.cardSectionContainer{
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgb(217, 212, 212);
+}
+.cardSection{
+     height: 100%;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 5%;
+}
+.adv{
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+}
+.card1{
+    width: 35%;
+    height: 150px;
+    background-color: rgb(68, 29, 224);
+    color: #ffffff;
+    border-radius: 5%;
+    margin-left: 10%;
+
+}
+.card2{
+    width: 35%;
+    height: 150px;
+    background-color: rgb(226, 43, 43);
+    color: #ffffff;
+    border-radius: 5%;
+    margin-left: 10%;
+
+}
+.card3{
+    width: 35%;
+    height: 150px;
+    background-color: rgb(245, 158, 8);
+    color: #ffffff;
+    border-radius: 5%;
+    margin-left: 10%;
+
+}
+.card4{
+    width: 35%;
+    height: 150px;
+    background-color: rgb(7, 210, 203);
+    color: #ffffff;
+    border-radius: 5%;
+    margin-left: 10%;
+
+}
+.card5{
+    width: 35%;
+    height: 150px;
+    background-color: rgb(8, 177, 68);
+    color: #ffffff;
+    border-radius: 5%;
+    margin-left: 10%;
+
+}
+.card6{
+    width: 35%;
+    height: 150px;
+    background-color: rgb(132, 9, 170);
+    color: #ffffff;
+    border-radius: 5%;
+    margin-left: 10%;
+
+}
+.cardimage{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    align-items: center;
+    margin-top: 5px;
+}
+.cards1{
+    margin-top:4%;
+    display: flex;
+}
+.cards2{
+    margin-top:4%;
+    display: flex;
+}
+.cards3{
+    margin-top:4%;
+    display: flex;
+}
+h3 {
+    text-align: center;
+}
+p{
+    margin-top: 5%;
+    font-size: smaller;
+    text-align: center;
+
+}
+.HConatiner{
+     height: 100%;
+    width: 80%;
+    margin: 0 auto;
+}
+.data{
+    font-size: larger;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: bold;
+    text-align: center;
+}
+.Hcard1{
+    width: 26%;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10%;
+    margin: 3%;
+    box-shadow: 1px 1px 10px rgb(6, 6, 11);
+}
+.Hcard1:hover{
+    transform: rotate(5deg);
+}
+.profielogo{
+    height: 50px;
+    width: 50px;
+    margin-top: 12px;
+}
+.hcardContainer{
+    display: flex;
+    
+}
+a{
+    text-decoration: none;
+}
+.UpdateContainer{
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 4%;
+    display: flex;
+    background-color: rgb(229, 227, 227);
+}
+.latestUpdateCon{
+    margin: 5%;
+    margin-left: 15%;
+
+}
+
+.hl{
+    color: rgb(132, 9, 170);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.hg{
+    color: grey;
+}
+.send{
+    color:white;
+    font-style: bold;
+    background-color: rgb(132, 9, 170);
+    padding: 2px;
+    margin: 2;
+    border-radius: 15%;
+    width: 80px;
+
+}
+.footer{
+     height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    margin:10%;
+}
+
+.left{
+    width: 30%;
+}
+.cmp{
+    margin-top: 15px;
+    margin-left: 40px;
+    display: flex;
+    align-content: center;
+
+}
+.mainf
+{
+    display: flex;
+}
+.right{
+    display: flex;
+    align-items: center;
+}
+.sectionr1,.sectionr2,.sectionr3,.sectionr4{
+    width: 40%;
+    margin: 10%;
+}
+b{
+    font-family :Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.rs{
+    color: rgb(100, 99, 99);
+   text-align: center;
+}
+.Copy{
+        color: rgb(85, 83, 83);
+
+}

@@ -1,0 +1,118 @@
+*{
+    padding: 0%;
+    margin: 0%;  
+    box-sizing: border-box;
+}
+
+body{
+    background:linear-gradient( rgb(24, 126, 166),rgb(216, 216, 246));
+    background-attachment: fixed;
+   
+}
+.icontainer{
+    position: fixed;
+   
+    width: 100%;
+    height: 100vh;
+    width: 80%;
+    height:480px;
+    margin: 7%;
+    margin-left: 10%;
+    border-radius: 10px;
+    background:linear-gradient(rgb(249, 246, 246),rgb(242, 212, 156));
+    box-shadow: rgb(66, 66, 65) 2px 2px 150px;
+
+
+    
+}
+#enterlocation{
+    
+    margin-left:70% ;
+}
+.locationconatiner{
+    padding-top: 10px;
+     height: 40px;
+}
+#location{
+     box-shadow: rgb(250, 219, 157) 1px 1px 10px;
+    height: 40px;
+    width: 60%;
+    border-radius: 5px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    border: none;
+}
+#search{
+     box-shadow: rgb(239, 213, 164) 1px 1px 10px;
+    width: 30%;
+    margin-left: 12px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 5px;
+    border: none;
+    font-size: medium;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    cursor: pointer;
+}
+
+.tempcontainer{
+  box-shadow: rgb(239, 213, 164) 1px 1px 10px;
+    width: 25%;
+    height: 50%;
+    border-radius: 10px;
+    margin-left: 35%;
+
+}
+.temp{
+    font-size: large;
+    font-family:'Courier New', Courier, monospace;
+}
+.h3{
+     font-size: larger;
+    font-family:Arial, Helvetica, sans-serif;
+    padding: 1%;
+    
+}
+.h31{
+     font-size: larger;
+    font-family:Arial, Helvetica, sans-serif;
+    padding: 1%;
+    height: 30px;
+    
+}
+
+.huwindcontainer{
+display: flex;
+
+}
+
+
+
+.humidity{
+    width: 25%;
+    height: 180px;
+    border-radius: 10px;
+     box-shadow: rgb(226, 191, 125) 1px 1px 10px;
+    margin-left: 2%;
+
+    
+
+}
+
+.wind{
+    width: 25%;
+    height: 180px;
+    border-radius: 10px;
+    margin-left: 45%;
+     box-shadow: rgb(226, 191, 125) 1px 1px 10px;
+
+
+}
+
+#icon{
+  margin-left: 10%;
+    height: 70%;
+    width: 70%;
+   
+}
+
