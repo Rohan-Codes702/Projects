@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inventory System</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #d8e1e6;
+      color: #2c3e50;
+    }
+
+    .dashboard-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .dashboard-header {
+      background: linear-gradient(135deg, #4a5d6f, #6c7a89);
+      color: rgb(255, 255, 255);
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    .top-bar {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    #searchInput {
+      padding: 10px;
+      width: 100%;
+      max-width: 300px;
+      border: 1px solid #c7c1c1;
+      border-radius: 6px;
+    }
+
+    .logout-btn {
+      padding: 10px 20px;
+      background-color: #e74c3c;
+      border: none;
+      color: white;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .logout-btn:hover {
+      background-color: #c0392b;
+    }
+
+    .main-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .form-container,
+    .inventory-table,
+    .summary {
+      background-color: rgb(247, 236, 236);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .form-container {
+      flex: 0 0 300px;
+    }
+
+    .form-container h2,
+    .inventory-table h2,
+    .summary h2 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-size: 22px;
+      color: #2c3e50;
+    }
+
+    .form-container input[type="text"],
+    .form-container input[type="number"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    .form-container button {
+      width: 100%;
+      padding: 12px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .form-container button:hover {
+      background-color: #2980b9;
+    }
+
+    .inventory-table {
+      flex: 1;
+      min-width: 400px;
+    }
+
+    .inventory-table table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #3498db;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+
+    tr:hover {
+      background-color: #e3f2fd;
+    }
+
+    .inventory-table button {
+      background-color: #f39c12;
+      border: none;
+      padding: 6px 10px;
+      border-radius: 4px;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+      margin: 0 2px;
+    }
+
+    .inventory-table button:hover {
+      background-color: #e67e22;
+    }
+
+    .summary {
+      flex:  0 0 100px;
+    }
+
+    .summary h2 {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .summary h2::after {
+      content: "💸";
+      font-size: 24px;
+      margin-left: 8px;
+    }
+
+    .summary p {
+      font-size: 18px;
+      margin: 8px ;
+    }
+
+    .print-bill-btn {
+      background-color: #3498db;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 15px 0;
+    }
+
+    .print-bill-btn:hover {
+      background-color: #2980b9;
+    }
+
+    @media (max-width: 768px) {
+      .main-content {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .form-container,
+      .inventory-table {
+        width: 100%;
+      }
+      .summary {
+        height: 50%;
+      }
+
+      .top-bar {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      #searchInput {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Header -->
+    <header class="dashboard-header">
+      <h1>Inventory System</h1>
+      <div class="top-bar">
+        <input type="text" id="searchInput" placeholder="Search product..." onkeyup="searchProduct()" />
+        <button class="logout-btn" onclick="logout()">Logout</button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Form -->
+      <div class="form-container">
+        <h2>Manage Product</h2>
+        <form id="productForm">
+          <input type="text" id="name" placeholder="Product Name" required />
+          <input type="number" id="qty" placeholder="Quantity" required />
+          <input type="number" id="price" placeholder="Price" required />
+          <button type="button" onclick="addOrUpdateProduct()">Save</button>
+        </form>
+      </div>
+
+      <!-- Table -->
+      <div class="inventory-table">
+        <h2>Product List</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Qty</th>
+              <th>Price</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="productTable"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Summary -->
+    <div class="summary">
+      <h2>Summary</h2>
+      <p>Total Items: <span id="totalItems">0</span></p>
+      <p>Total Value: ₹<span id="totalValue">0</span></p>
+      <button class="print-bill-btn" onclick="printBill()">Print Bill</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
